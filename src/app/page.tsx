@@ -12,11 +12,11 @@ export default function Home() {
                 className="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
                 <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
                     <video className="min-w-full min-h-full absolute object-cover" src={GetHomeVideo()}
-                           autoPlay muted loop></video>
+                           autoPlay muted loop preload={'/content/video-background.png'}></video>
                 </div>
                 <div className="video-content max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
                     <div
-                        className="flex flex-col w-full lg:w-6/12 justify-center lg:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
+                        className="flex flex-col w-full lg:w-6/12 justify-center md:pt-44 xl:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
                         <h1 data-aos="fade-right" data-aos-once="true"
                             className="my-4 text-5xl font-bold leading-tight text-darken aos-init aos-animate">
                             <span className="text-green-500">Aprenda</span> uma linguagem de programação
@@ -41,13 +41,16 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={'w-full lg:w-6/12 lg:-mt-10 relative lg:pt-24'}>
-                        <svg className={'w-10/12 mx-auto 2xl:-mb-20 aos-init aos-animate'} viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+                        <svg className={'w-10/12 mx-auto 2xl:-mb-20 aos-init aos-animate'} viewBox="0 0 480 480"
+                             xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <clipPath id="blob">
-                                    <path fill="#22c55e" d="M422,310Q380,380,310,414Q240,448,167.5,416.5Q95,385,61.5,312.5Q28,240,51,157Q74,74,157,38.5Q240,3,302,59.5Q364,116,414,178Q464,240,422,310Z" />
+                                    <path fill="#22c55e"
+                                          d="M422,310Q380,380,310,414Q240,448,167.5,416.5Q95,385,61.5,312.5Q28,240,51,157Q74,74,157,38.5Q240,3,302,59.5Q364,116,414,178Q464,240,422,310Z"/>
                                 </clipPath>
                             </defs>
-                            <image x="0" y="0" width="100%" height="100%" clipPath="url(#blob)" href={'/content/estudante.jpg'} preserveAspectRatio="xMidYMid slice"></image>
+                            <image x="0" y="0" width="100%" height="100%" clipPath="url(#blob)"
+                                   href={'/content/estudante.jpg'} preserveAspectRatio="xMidYMid slice"></image>
                         </svg>
                     </div>
                 </div>
