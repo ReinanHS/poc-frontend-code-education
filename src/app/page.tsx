@@ -5,18 +5,18 @@ import {PlayIcon} from "@heroicons/react/24/solid";
 export default function Home() {
     return (
         <div className={'flex flex-col h-screen'}>
-            <section className={'w-full lg:absolute z-10'}>
+            <section className={'w-full lg:absolute z-20'}>
                 <HomeHeader></HomeHeader>
             </section>
             <section
-                className="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
+                className="relative flex flex-col items-center justify-center text-center text-white py-0 px-3">
                 <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
                     <video className="min-w-full min-h-full absolute object-cover" src={GetHomeVideo()}
                            autoPlay muted loop preload={'/content/video-background.png'}></video>
                 </div>
-                <div className="video-content max-w-screen-xl px-8 mx-auto flex flex-col lg:flex-row items-start">
+                <div className="z-10 max-w-screen-xl px-8 md:py-36 lg:py-56 mx-auto flex flex-col lg:flex-row items-start justify-center">
                     <div
-                        className="flex flex-col w-full lg:w-6/12 justify-center md:pt-44 xl:pt-24 items-start text-center lg:text-left mb-5 md:mb-0">
+                        className="flex flex-col w-full lg:w-6/12 justify-center items-start text-center lg:text-left">
                         <h1 data-aos="fade-right" data-aos-once="true"
                             className="my-4 text-5xl font-bold leading-tight text-darken aos-init aos-animate">
                             <span className="text-green-500">Aprenda</span> uma linguagem de programação
@@ -34,13 +34,13 @@ export default function Home() {
                                 Iniciar estudos
                             </button>
                             <div className="flex items-center justify-center space-x-3 mt-5 md:mt-0 btn-zoom">
-                                <button className="bg-white w-14 h-14 rounded-full flex items-center justify-center">
+                                <button className="bg-white w-14 h-14 rounded-full flex items-center justify-center hover:opacity-80">
                                     <PlayIcon className={'w-5 h-5 fill-black'}></PlayIcon>
                                 </button>
                                 <span className="cursor-pointer">Veja como funciona</span></div>
                         </div>
                     </div>
-                    <div className={'w-full lg:w-6/12 lg:-mt-10 relative lg:pt-24'}>
+                    <div className={'w-full lg:w-6/12 relative'}>
                         <svg className={'w-10/12 mx-auto 2xl:-mb-20 aos-init aos-animate'} viewBox="0 0 480 480"
                              xmlns="http://www.w3.org/2000/svg">
                             <defs>
@@ -54,6 +54,15 @@ export default function Home() {
                         </svg>
                     </div>
                 </div>
+                <div className="custom-shape-divider-bottom-1684796162 z-10">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                         preserveAspectRatio="none">
+                        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" className="bg-black"></path>
+                    </svg>
+                </div>
+            </section>
+            <section className={'bg-black h-1/5 w-screen'}>
+
             </section>
         </div>
     )
