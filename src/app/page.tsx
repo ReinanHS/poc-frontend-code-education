@@ -11,11 +11,15 @@ export default function Home() {
             </section>
             <section
                 className="relative flex flex-col items-center justify-center text-center text-white py-0 px-3">
-                <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+                <div className="video-docker absolute top-0 left-0 w-full h-full overflow-hidden" style={{
+                    'backgroundImage': 'url(/content/video-backgroud-small.png)',
+                    'backgroundSize': 'cover'
+                }}>
                     <video className="min-w-full min-h-full absolute object-cover" src={GetHomeVideo()}
                            autoPlay muted loop preload={'/content/video-background.png'}></video>
                 </div>
-                <div className="z-10 max-w-screen-xl px-8 md:py-36 lg:py-56 mx-auto flex flex-col lg:flex-row items-start justify-center">
+                <div
+                    className="z-10 max-w-screen-xl px-8 md:py-36 lg:py-56 mx-auto flex flex-col lg:flex-row items-start justify-center">
                     <div
                         className="flex flex-col w-full lg:w-6/12 justify-center items-start text-center lg:text-left">
                         <h1 data-aos="fade-right" data-aos-once="true"
@@ -35,7 +39,8 @@ export default function Home() {
                                 Iniciar estudos
                             </button>
                             <div className="flex items-center justify-center space-x-3 mt-5 md:mt-0 btn-zoom">
-                                <button className="bg-white w-14 h-14 rounded-full flex items-center justify-center hover:opacity-80">
+                                <button
+                                    className="bg-white w-14 h-14 rounded-full flex items-center justify-center hover:opacity-80">
                                     <PlayIcon className={'w-5 h-5 fill-black'}></PlayIcon>
                                 </button>
                                 <span className="cursor-pointer">Veja como funciona</span></div>
