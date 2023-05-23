@@ -91,14 +91,14 @@ export default function ProgrammingLangContent() {
     ]
 
     return (
-        <div className={'bg-black h-14 w-full flex flex-col justify-center items-center'}>
+        <div className={'bg-[#010202] h-14 w-full flex flex-col justify-center items-center'}>
             <Carousel
                 className={'w-1/2'}
                 responsive={responsive}
                 infinite={true}
                 autoPlay={true}
                 arrows={false}
-                autoPlaySpeed={1000 * 4}>
+                autoPlaySpeed={1000 * 6}>
                 {
                     programmingLanguage.map((language, index) => {
                         return (
