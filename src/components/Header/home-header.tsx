@@ -7,10 +7,8 @@ import {motion} from "framer-motion";
 
 export default function HomeHeader() {
 
-    const initialMenuValue = window.innerWidth >= 768;
-
-    const [isMenuOpen, setMenuOpen] = useState(initialMenuValue);
-    const [currentWidth, setCurrentWidth] = useState(window.innerWidth);
+    const [isMenuOpen, setMenuOpen] = useState(true);
+    const [currentWidth, setCurrentWidth] = useState(0);
 
     const widthRef = useRef<number>(currentWidth);
 

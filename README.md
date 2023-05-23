@@ -50,6 +50,7 @@ Esse projeto roda nos seguintes softwares:
 - [Color Hunt](https://colorhunt.co/palettes/popular)
 - [unDraw](https://undraw.co/)
 - [Heroicons](https://heroicons.com/)
+- [Devicon](https://devicon.dev/)
 
 ### Changelog
 

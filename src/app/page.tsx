@@ -1,10 +1,11 @@
 import HomeHeader from "@/components/Header/home-header";
 import GetHomeVideo from "@/constants/page";
 import {PlayIcon} from "@heroicons/react/24/solid";
+import ProgrammingLangContent from "@/components/Content/programming-lang-content";
 
 export default function Home() {
     return (
-        <div className={'flex flex-col h-screen'}>
+        <div className={'flex flex-col'}>
             <section className={'w-full lg:absolute z-20'}>
                 <HomeHeader></HomeHeader>
             </section>
@@ -61,8 +62,8 @@ export default function Home() {
                     </svg>
                 </div>
             </section>
-            <section className={'bg-black h-1/5 w-screen'}>
-
+            <section>
+                <ProgrammingLangContent></ProgrammingLangContent>
             </section>
         </div>
     )
