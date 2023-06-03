@@ -1,4 +1,4 @@
-export default function GetHomeVideo() {
+export function GetHomeVideo() : string {
     const projectID = 'quickstart-1566913824070';
     const firebaseUrl = `https://firebasestorage.googleapis.com/v0/b/${projectID}.appspot.com`
     const videoName = 'pexels-pressmaster.mp4'

@@ -1,4 +1,4 @@
-@import "devicon";
+@import "../../node_modules/devicon";
 
 @tailwind base;
 @tailwind components;
