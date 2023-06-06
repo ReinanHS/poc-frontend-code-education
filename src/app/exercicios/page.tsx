@@ -6,6 +6,7 @@ import {
     StarIcon,
     UsersIcon
 } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 export default function Page() {
     const exercises = [
@@ -46,12 +47,12 @@ export default function Page() {
                         {
                             exercises.map((item, index) => {
                                 return (
-                                    <div className="flex flex-col">
+                                    <div className="flex flex-col" key={index}>
                                         <div
                                             className="bg-gray-900 border border-gray-900 shadow-lg  rounded-3xl p-4 m-4">
                                             <div className="flex-none sm:flex">
                                                 <div className=" relative h-32 w-32 sm:mb-0 mb-3">
-                                                    <img
+                                                    <Image
                                                         src="https://img.freepik.com/fotos-gratis/close-up-de-jovem-caucasiano-em-estudio_155003-19012.jpg?w=740&t=st=1686009912~exp=1686010512~hmac=7c37e36da5a612d2c0c47f046d46177a1edb63ee0c723a18bc347d85f72960b7"
                                                         alt="aji" className="w-32 h-32 object-cover rounded-2xl"/>
                                                     <a className="absolute -right-2 bottom-2 -ml-3 text-white p-1 text-xs bg-green-500 hover:bg-green-600 font-medium tracking-wider rounded-full transition ease-in duration-300"
