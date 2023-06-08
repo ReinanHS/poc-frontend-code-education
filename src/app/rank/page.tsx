@@ -11,6 +11,33 @@ interface UserData {
     state: string,
 }
 
+interface CollegeData {
+    college: string,
+    summary: string,
+    photo: string,
+    score: number,
+    students: number,
+}
+
+function fakeCollegeData(): CollegeData[] {
+    return [
+        {
+            "college": "Instituto Federal de Sergipe",
+            "summary": "A Universidade Federal de Sergipe é uma instituição pública federal localizada no município de São Cristóvão, Sergipe. Essa faculdades conseguiu atingir uma pontuação de destaque na nossa plataforma esse mês.",
+            "photo": "/content/faculdades/faculdade-ifs-banner.png",
+            "score": 1500,
+            "students": 50
+        },
+        {
+            "college": "Universidade Estadual de São Paulo",
+            "summary": "A Universidade Estadual de São Paulo é uma instituição de ensino superior pública localizada em São Paulo, São Paulo. Possui um programa de pesquisa premiado e uma vasta gama de cursos acadêmicos.",
+            "photo": "https://www.sorocaba.unesp.br/Home/Instituicao/entrada-reformada-001.jpg",
+            "score": 1750,
+            "students": 80
+        },
+    ];
+}
+
 function fakeUserData(): UserData[] {
     return [
         {
@@ -117,7 +144,8 @@ export default function Page() {
                                 <h1 className="text-5xl font-medium mb-6 text-center">Ranking</h1>
                                 <p className="text-xl mb-12">
                                     Aqui estão algumas informações valiosas sobre os alunos.
-                                    Nesta página, você encontrará uma variedade de dados sobre as linguagens de programação
+                                    Nesta página, você encontrará uma variedade de dados sobre as linguagens de
+                                    programação
                                     que os alunos estão mais interessados em aprender.
                                 </p>
                             </div>
@@ -140,9 +168,11 @@ export default function Page() {
                     <div className="text-center">
                         <h1 className="text-5xl font-medium mb-6">Ranking dos Alunos</h1>
                         <p className="text-xl mb-12 text-left">
-                            Confira abaixo o ranking atualizado dos alunos com as pontuações mais altas na nossa plataforma durante este mês.
+                            Confira abaixo o ranking atualizado dos alunos com as pontuações mais altas na nossa
+                            plataforma durante este mês.
                             Esses alunos demonstraram um excelente desempenho e dedicação ao utilizar nossa plataforma.
-                            Suas pontuações destacam-se entre milhares de estudantes, mostrando sua habilidade em assimilar e aplicar o conhecimento.
+                            Suas pontuações destacam-se entre milhares de estudantes, mostrando sua habilidade em
+                            assimilar e aplicar o conhecimento.
                         </p>
                     </div>
                     <div className={'grid grid-cols-1 lg:grid-cols-2 gap-2 w-full'}>
@@ -154,11 +184,34 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+            <section className="py-10 w-full bg-green-700">
+                <div className="container mx-auto text-left text-white mt-4 px-5">
+                    <div className="text-center">
+                        <h1 className="text-5xl font-medium mb-6">Ranking por faculdade</h1>
+                        <p className="text-xl mb-12 text-left">
+                            Confira abaixo o ranking atualizado das faculdades que obtiveram as maiores pontuações neste
+                            mês, com base no desempenho dos alunos.
+                            Essas faculdades demonstraram um compromisso excepcional com a excelência acadêmica e o
+                            sucesso dos seus alunos.
+                            Através de programas de ensino de alta qualidade, corpo docente experiente e recursos
+                            educacionais inovadores, essas instituições têm proporcionado uma educação de excelência e
+                            preparado os alunos para um futuro brilhante.
+                        </p>
+                    </div>
+                    <div className={'grid grid-cols-1 lg:grid-cols-2 gap-2'}>
+                        {
+                            fakeCollegeData().map((item, index) => {
+                                return CollegeCard(item, index);
+                            })
+                        }
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
 
-export function UserCard(userData: UserData, index: number) {
+function UserCard(userData: UserData, index: number) {
     return (
         <div className="flex flex-col" key={index}>
             <div className="bg-gray-900 border border-gray-900 shadow-lg  rounded-3xl p-4 m-4">
@@ -170,7 +223,7 @@ export function UserCard(userData: UserData, index: number) {
                                 alt="Foto de perfil" className="w-32 h-32 object-cover rounded-2xl"/>
                             <button
                                 className="absolute -right-2 bottom-2 -ml-3 text-white p-1 text-lg bg-green-600 hover:bg-green-500 font-medium tracking-wider rounded-full transition ease-in duration-300">
-                                { index < 10 ? `0${index}` : index}
+                                {index < 10 ? `0${index}` : index}
                             </button>
                         </div>
                     </div>
@@ -209,6 +262,35 @@ export function UserCard(userData: UserData, index: number) {
                                 className="bg-green-600 text-white px-5 ml-4 py-2 rounded-full hover:bg-green-500 w-full">
                                 Perfil
                             </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function CollegeCard(collegeData: CollegeData, index: number) {
+    return (
+        <div className="flex flex-col w-full bg-white rounded shadow-lg" key={index}>
+            <div className="w-full h-64 bg-top bg-cover rounded-t"
+                 style={{backgroundImage: `url(${collegeData.photo})`, backgroundPosition: 'center'}}></div>
+            <div className="flex flex-col w-full h-auto lg:h-3/5 md:flex-row">
+                <div
+                    className="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
+                    <div className="md:text-3xl">Score</div>
+                    <div className="md:text-6xl">{collegeData.score}</div>
+                </div>
+                <div className="p-4 font-normal text-gray-800 md:w-3/4">
+                    <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800">
+                        {collegeData.college}
+                    </h1>
+                    <p className="leading-normal">
+                        {collegeData.summary}
+                    </p>
+                    <div className="flex flex-row items-center mt-4 text-gray-700">
+                        <div className="w-1/2">
+                            {collegeData.students} alunos ativos na plataformas
                         </div>
                     </div>
                 </div>
