@@ -3,17 +3,19 @@ import Image from "next/image";
 export default function GamificationContent() {
     return (
         <div
-            className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+            className="gap-16 items-center px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:px-6">
             <div className="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                 <h2 className="mb-4 text-4xl font-extrabold text-gray-900 dark:text-white">
-                    Gamificação na educação
+                    Como funciona?
                 </h2>
                 <p className="mb-4">
-                    Nossa plataforma inovadora de ensino de linguagem de programação é projetada especificamente
-                    para alunos que estão cursando cursos de graduação com disciplinas introdutórias de
-                    programação.
                     Utilizamos uma abordagem única, incorporando mecanismos de gamificação para tornar o
                     processo de aprendizagem divertido, envolvente e eficaz.
+
+                    Acreditamos que a gamificação é uma abordagem poderosa para ensinar linguagem de programação, pois combina a diversão e o desafio dos jogos com o conteúdo educacional.
+                </p>
+                <p className="mb-4">
+                    Ao tornar a aprendizagem mais envolvente e divertida, nossa plataforma ajuda os alunos a absorverem os conceitos de programação de forma mais eficaz e a se tornarem programadores habilidosos.
                 </p>
                 <p>
                     Os alunos são apresentados a conceitos e práticas de programação por meio de atividades

@@ -1,6 +1,6 @@
 import {GetHomeVideo} from "@/constants/page";
 import {PlayIcon} from "@heroicons/react/24/solid";
-import './main-content.css'
+import '../../style/main-content.css'
 
 export default function MainContent() {
     return (
