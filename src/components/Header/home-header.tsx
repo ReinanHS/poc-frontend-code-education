@@ -60,9 +60,9 @@ export default function HomeHeader({isMenuAbsolute}: InferGetServerSidePropsType
                 className={'flex flex-col max-w-screen-xl mx-auto px-5 lg:flex-row lg:items-center lg:justify-between'}>
                 <div className={'flex flex-row items-center justify-between py-6'}>
                     <div className={'md:mt-8'}>
-                        <a href={'#'}>
+                        <Link href={'/'}>
                             <Image src={'/logo-educacode.svg'} alt={'Logo do EducaCode'} width={153} height={36}/>
-                        </a>
+                        </Link>
                     </div>
                     <button className={'rounded-lg lg:hidden focus:outline-none focus:shadow-outline hover:opacity-80'}
                             onClick={onClickMenu}>
@@ -83,14 +83,14 @@ export default function HomeHeader({isMenuAbsolute}: InferGetServerSidePropsType
                                 )
                             })
                         }
-                        <a href="#"
+                        <Link href="/"
                            className="px-10 py-3 mt-2 text-sm text-center bg-white hover:bg-white/80 text-gray-800 rounded-full lg:mt-8 lg:ml-4">
                             Doar
-                        </a>
-                        <a href="#"
+                        </Link>
+                        <Link href="/"
                            className="px-10 py-3 mt-2 text-sm text-center bg-green-600 hover:bg-green-700 text-white rounded-full lg:mt-8 lg:ml-4">
                             Entrar
-                        </a>
+                        </Link>
                     </nav>
                 </motion.div>
             </header>

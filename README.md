@@ -68,3 +68,4 @@ Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais
 
 - [Freepik - estudante no computador](https://br.freepik.com/fotos-gratis/estudante-on-line-bonito-jovem-estudando-no-computador-em-oculos-de-camisa-verde-sorrindo_26221536.htm#&position=0&from_view=user)
 - [Imagem de Xvect intern no Freepik](https://br.freepik.com/psd-gratuitas/copa-do-trofeu-icone-isolado-3d-render-ilustracao_28991002.htm#query=rank&position=3&from_view=search&track=sph)
+- [Image by stockking on Freepik](https://www.freepik.com/free-photo/smiling-young-pretty-caucasian-girl-wearing-glasses-headphones-holding-looking-mobile-phone-isolated-green-background-with-copy-space_10950586.htm#query=gamification&position=15&from_view=search&track=ais#position=15&query=gamification)

@@ -1,5 +1,7 @@
 import ProgrammingLangContent from "@/components/Content/programming-lang-content";
 import MainContent from "@/components/Content/main-content";
+import GamificationContent from "@/components/Content/gamification-content";
+import TestimonialsContent from "@/components/Content/testimonials-content";
 
 export default function Home() {
     return (
@@ -10,6 +12,10 @@ export default function Home() {
             </section>
             <section className={'bg-[#010202] h-14 w-full flex flex-col justify-center items-center'}>
                 <ProgrammingLangContent></ProgrammingLangContent>
+            </section>
+            <section className={'bg-[#010202] w-full flex flex-col'}>
+                <GamificationContent></GamificationContent>
+                <TestimonialsContent></TestimonialsContent>
             </section>
         </>
     )
