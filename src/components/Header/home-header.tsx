@@ -6,6 +6,7 @@ import {useEffect, useRef, useState} from 'react';
 import {motion} from "framer-motion";
 import {GetServerSideProps, InferGetServerSidePropsType} from "next";
 import MenuItemList from "@/constants/menu-itens";
+import Link from "next/link";
 
 interface HeaderProps {
     isMenuAbsolute: boolean;
@@ -74,11 +75,11 @@ export default function HomeHeader({isMenuAbsolute}: InferGetServerSidePropsType
                         {
                             MenuItemList().map((item, index) => {
                                 return (
-                                    <a href={item.link}
+                                    <Link href={item.link}
                                        key={index}
                                        className={'px-4 py-2 mt-2 text-sm bg-transparent rounded-lg lg:mt-8 lg:ml-4 hover:text-green-600'}>
                                         {item.name}
-                                    </a>
+                                    </Link>
                                 )
                             })
                         }

@@ -1,6 +1,7 @@
 import '../style/globals.css'
 import {Inter} from 'next/font/google'
 import HomeHeader from "@/components/Header/home-header";
+import NextTopLoader from 'nextjs-toploader';
 
 const inter = Inter({subsets: ['latin']})
 
@@ -15,6 +16,7 @@ export default function RootLayout({children}: {
     return (
         <html lang="pt">
         <body className={inter.className}>
+        <NextTopLoader color="#22c55e" />
         <div className={'flex flex-col'}>
             <HomeHeader isMenuAbsolute={true}></HomeHeader>
             {children}
